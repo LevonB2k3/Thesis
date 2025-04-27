@@ -1,0 +1,216 @@
+/* ✅ Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f0f2f5, #e6ecf0);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ✅ Main Container */
+.container {
+  width: 95%;
+  max-width: 1200px;
+  height: 90vh;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ✅ Left Side - File Preview & Upload */
+.file-section {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ✅ Authentication Panel (Right Side) */
+.auth-container {
+  width: 30%;
+  background: rgba(0, 68, 204, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.auth-container button {
+  width: 100%;
+}
+
+/* ✅ Buttons */
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: #0044cc;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #0033a0;
+}
+
+.btn.secondary {
+  background: #17a2b8;
+  color: white;
+}
+
+.btn.secondary:hover {
+  background: #138496;
+}
+
+.btn.delete {
+  background: #dc3545;
+  color: white;
+}
+
+.btn.delete:hover {
+  background: #c82333;
+}
+
+.btn.logout {
+  background: #f8b400;
+  color: white;
+}
+
+.btn.logout:hover {
+  background: #d99a00;
+}
+
+/* ✅ Forgot Password */
+.forgot-password {
+  color: #0044cc;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Password Reset Form */
+.reset-password-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ✅ Upload Section */
+.upload-container {
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px dashed #0044cc;
+  background: rgba(0, 68, 204, 0.05);
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.upload-container:hover {
+  background: rgba(0, 68, 204, 0.1);
+}
+
+/* ✅ File Grid */
+.file-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* ✅ File Items */
+.file-item {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.file-item:hover {
+  transform: translateY(-3px);
+}
+
+/* ✅ File Previews */
+.file-preview {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ✅ File Actions */
+.file-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.file-actions button {
+  flex: 1;
+  margin: 5px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .file-section {
+    width: 100%;
+    order: 2;
+  }
+
+  .auth-container {
+    width: 100%;
+    margin-bottom: 20px;
+    order: 1;
+  }
+
+  .file-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .file-preview {
+    height: 120px;
+  }
+}
